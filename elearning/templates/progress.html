@@ -1,0 +1,94 @@
+{% block content %}
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Login Page</title>
+     <style>
+         body {
+             margin: 0;
+             padding: 0;
+             display: flex;
+             justify-content: flex-end;
+             align-items: flex-start;
+             min-height: 100vh;
+             background-color: #f0f0f0;
+         }
+         
+         .login-container {
+             width: 20%;
+             padding: 20px;
+             background-color: #044a04;
+             border: 2px solid #044a04;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+             /* transform: rotate(45deg); */
+             margin-top: 5%;
+             position: fixed;
+             top: 0;
+             right: 0;
+             box-sizing: border-box;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             align-items: stretch;
+             color: white;
+         }
+ 
+         .login-form {
+             display: flex;
+             flex-direction: column;
+             gap: 10px;
+         }
+ 
+         .login-form label {
+             margin-bottom: 5px;
+         }
+ 
+         .login-form input {
+             padding: 5px;
+             border: 1px solid #ccc;
+             border-radius: 3px;
+         }
+ 
+         .login-form button {
+             padding: 8px 12px;
+             background-color: #00ff00;
+             color: white;
+             border: none;
+             cursor: pointer;
+         }
+ 
+         .exit-button {
+             align-self: flex-end;
+             /* background-color: #00ff00; */
+             color: white;
+             border: none;
+             cursor: pointer;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="login-container">
+         <h1>Login</h1>
+         <form class="login-form">
+             <label for="registrationNumber">Registration Number:</label>
+             <input type="text" id="registrationNumber" name="registrationNumber" required>
+ 
+             <label for="password">Password:</label>
+             <input type="password" id="password" name="password" required>
+ 
+             <button type="submit">Login</button>
+         </form>
+         <button class="exit-button" onclick="exitApp()">Exit</button>
+     </div>
+ 
+     <script>
+         function exitApp() {
+             // Perform exit actions here (e.g., closing the browser window)
+             alert("Exiting the application.");
+         }
+     </script>
+ </body>
+ </html>
+ 
+ 
+{% endblock %}
